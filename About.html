@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Teqtronics Pakistan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <style>
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+      /* ----------------------------
+  Tech Hub — About page CSS
+  Blue + Gray Theme (modern look)
+-----------------------------*/
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      :root {
+        --primary: #d63232;
+        --secondary: #b60e0e;
+        --card-border: #b20623;
+        --muted: #666;
+        --bg: #ffffff;
+        --page-gray: #f6f7f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--page-gray);
+        color: #222;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* -------------------------
+   Top banner
+-------------------------*/
+      section.section.section-light:first-of-type {
+        background: linear-gradient(
+          180deg,
+          var(--secondary) 0%,
+          var(--primary) 100%
+        );
+        color: #fff;
+        text-align: center;
+        padding: 120px 6% 180px; /* balanced padding */
+        position: relative;
+      }
+
+      section.section.section-light:first-of-type h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+
+      section.section.section-light:first-of-type p {
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 18px;
+        max-width: 900px;
+        margin: 0 auto 12px;
+      }
+
+      /* -------------------------
+   Base sections
+-------------------------*/
+      .section {
+        padding: 80px 6%;
+        background: var(--page-gray);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .section.section-blue {
+        background: #fff;
+      }
+
+      .section .text {
+        flex: 1 1 55%;
+        min-width: 280px;
+      }
+      .section .image {
+        flex: 1 1 35%;
+        min-width: 240px;
+        text-align: center;
+      }
+      .section .image img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .section h2 {
+        font-size: 28px;
+        color: var(--primary);
+        margin-bottom: 18px;
+        font-weight: 600;
+      }
+      .section h3 {
+        font-size: 20px;
+        margin: 12px 0;
+        color: var(--secondary);
+      }
+      .section p {
+        color: var(--muted);
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .section ul {
+        margin: 12px 0 20px 18px;
+        color: var(--muted);
+      }
+      .section ul li {
+        margin-bottom: 8px;
+      }
+
+      .section .btn {
+        display: inline-block;
+        margin-top: 15px;
+        background: var(--secondary);
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .section .btn:hover {
+        background: var(--primary);
+      }
+
+      /* -------------------------
+   Cards overlap style
+-------------------------*/
+      .cards-wrapper {
+        margin-top: -100px; /* overlap ko reduce kiya */
+      }
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        transition: 0.3s;
+        cursor: pointer;
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+      }
+      .card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 6px 0 8px;
+      }
+      .card p {
+        color: #444;
+        font-size: 15.5px;
+        line-height: 1.8;
+        padding: 0 6%;
+      }
+
+      /* ----------------------------
+   Responsive Enhancements
+-----------------------------*/
+
+      /* Tablets and below */
+      @media (max-width: 992px) {
+        section.section {
+          padding: 60px 5%;
+          gap: 20px;
+        }
+        section.section.section-light:first-of-type h1 {
+          font-size: 36px;
+        }
+        section.section.section-light:first-of-type p {
+          font-size: 16px;
+        }
+        .section h2 {
+          font-size: 24px;
+        }
+        .section p,
+        .section ul {
+          font-size: 15px;
+        }
+        .section .btn {
+          padding: 10px 20px;
+        }
+      }
+      @media (max-width: 1020px) {
+        .cards-wrapper {
+          margin-top: 30px;
+        }
+        .cards-grid {
+          grid-template-columns: 1fr;
+          width: 100%;
+          padding: 0 5%;
+        }
+      }
+      /* Phones and small devices */
+      @media (max-width: 768px) {
+        section.section.section-light:first-of-type {
+          padding: 100px 5% 120px;
+        }
+        .section {
+          padding: 50px 5%;
+        }
+        .section h2 {
+          font-size: 22px;
+        }
+        .section h3 {
+          font-size: 18px;
+        }
+        .section .text,
+        .section .image {
+          flex: 1 1 100%;
+        }
+        .section .image img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+        .section .btn {
+          font-size: 14px;
+        }
+      }
+      /* Very small devices */
+      @media (max-width: 480px) {
+        section.section.section-light:first-of-type h1 {
+          font-size: 28px;
+        }
+        section.section.section-light:first-of-type p {
+          font-size: 15px;
+        }
+        .card {
+          padding: 25px 15px;
+        }
+        .card h3 {
+          font-size: 18px;
+        }
+        .card p {
+          font-size: 14px;
+        }
+        .section .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+      
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <section
+      id="WIT"
+      style="justify-content: center"
+      class="section section-light"
+    >
+      <div class="container">
+        <h1>About Teqtronics Pakistan</h1>
+        <p>
+          Teqtronics Pakistan, operating under the Türkiye-Pakistan partnership
+          and PITB, is Pakistan's first dedicated coworking space for
+          freelancers and innovators.
+        </p>
+        <p>
+          We bridge industry, academia, and government to foster a thriving
+          ecosystem of tech entrepreneurship and collaboration.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cards Overlap -->
+    <div class="cards-wrapper">
+      <div class="cards-grid">
+        <a href="it-trainings.html" class="card">
+          <img
+            src="https://img.icons8.com/fluency/96/000000/training.png"
+            alt="IT Trainings"
+          />
+          <h3>IT Trainings</h3>
+          <p>
+            Enhance your skills with our comprehensive IT training programs
+            designed for all levels.
+          </p>
+        </a>
+        <a href="marketing-services.html" class="card">
+          <img
+            src="https://img.icons8.com/fluency/96/000000/marketing.png"
+            alt="Marketing Services"
+          />
+          <h3>Marketing Services</h3>
+          <p>
+            Boost your business visibility with our digital marketing services
+            including SEO and branding.
+          </p>
+        </a>
+        <a href="business-consulting.html" class="card">
+          <img
+            src="https://img.icons8.com/fluency/96/000000/consultation.png"
+            alt="Business Consulting"
+          />
+          <h3>Business Consulting</h3>
+          <p>
+            Get expert consulting to streamline processes, increase
+            productivity, and grow your business.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mission / Vision -->
+    <section class="section section-blue">
+  <div class="mission-container">
+    
+
+    <!-- left Content -->
+    <div class="text">
+      <h2>Our Mission & Vision</h2>
+      <p>
+        <strong>Mission:</strong> To enable tech startups, freelancers, and
+        businesses in Pakistan by providing collaborative workspaces,
+        networks, and innovation support.
+      </p>
+      <p>
+        We focus on providing affordable, modern facilities where talent can
+        thrive and businesses can grow without barriers.
+      </p>
+
+      <h3>Core Goals</h3>
+      <ul>
+        <li>Encourage innovation and technology-based entrepreneurship.</li>
+        <li>Provide continuous upskilling through mentorship and training.</li>
+        <li>Create international partnerships and opportunities for Pakistani talent.</li>
+      </ul>
+
+      <p>
+        <strong>Vision:</strong> To position Pakistan as a leading hub for
+        technology, entrepreneurship, and export services.
+      </p>
+      <p>
+        Our long-term vision includes expanding globally and building bridges
+        with international startup communities.
+      </p>
+    </div>
+   
+     <!-- right Image -->
+    <div class="mission-img">
+      <img src="/vision.png" alt="Mission Image">
+    </div>
+  </div>
+</section>
+<style>.section-blue {
+  padding: 60px 20px;
+  background: #f4f8ff;
+}
+
+/* Main Layout */
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Image Styling */
+.mission-img {
+  flex: 1;
+}
+
+.mission-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text Styling */
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text ul {
+  padding-left: 20px;
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+  .mission-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    text-align: left;
+  }
+}</style>
+
+    <!-- Why Join Tech Hub -->
+    <section id="WJT" class="section section-light">
+      <div class="text">
+        <h2>Why Join Teqtronics?</h2>
+        <p>
+          Teqtronics provides world-class coworking spaces, mentorship, and access
+          to industry experts. It is the best place for freelancers, startups,
+          and businesses to collaborate and grow.
+        </p>
+        <p>
+          By enrolling, you gain networking opportunities, skill-building
+          programs, and support for turning ideas into reality.
+        </p>
+        <h3>Member Benefits</h3>
+        <ul>
+          <li>
+            Access to networking events and meetups with industry leaders.
+          </li>
+          <li>
+            Discounted participation in training and certification programs.
+          </li>
+          <li>Priority access to pitch competitions and startup showcases.</li>
+        </ul>
+        <p>
+          We offer state-of-the-art infrastructure, reliable high-speed
+          internet, training sessions, and 24/7 access to ensure your
+          productivity never stops.
+        </p>
+        <a href="Enroll.html" class="btn">Join Now</a>
+      </div>
+      <div class="image">
+        <img src="/Images/Why Join Teqtronics.png" alt="Why Join" />
+      </div>
+    </section>
+
+    <!-- Enroll Section -->
+    <section id="WCJ" class="section section-blue">
+      <div class="text">
+        <h2>Enroll Now</h2>
+        <p>
+          Whether you're a student, freelancer, or entrepreneur, Teqtronics is
+          open for everyone looking to scale their journey. Register today and
+          become a part of Pakistan's fastest-growing innovation ecosystem.
+        </p>
+        <h3>Who Can Apply?</h3>
+        <ul>
+          <li>
+            <strong>Students:</strong> Gain real-world exposure and mentorship
+            while you learn.
+          </li>
+          <li>
+            <strong>Freelancers:</strong> Access professional workspaces and
+            networking opportunities.
+          </li>
+          <li>
+            <strong>Startups:</strong> Get incubation, resources, and funding
+            guidance to grow your idea.
+          </li>
+        </ul>
+        <p>
+          Our enrollment process is simple and transparent. Just fill out the
+          application, choose your package, and join within 48 hours!
+        </p>
+        <a href="Enroll.html" class="btn">Enroll Today</a>
+      </div>
+      <div class="image">
+        <img src="enroll now.png" alt="Enroll Now" />
+      </div>
+    </section>
+
+    <!-- Campuses Section -->
+    <section class="section section-light">
+      <div class="text">
+        <h2>Our Campuses</h2>
+        <p>
+          We are expanding across Pakistan with campuses in major cities
+          including Lahore, Karachi, and Islamabad. Each campus is equipped with
+          state-of-the-art facilities, networking opportunities, and dedicated
+          support for your growth.
+        </p>
+        <h3>Facilities at Each Campus</h3>
+        <ul>
+          <li>High-speed internet and modern coworking areas.</li>
+          <li>Dedicated meeting and conference rooms.</li>
+          <li>On-site mentorship and training sessions.</li>
+          <li>Comfortable lounges and cafeterias for networking.</li>
+        </ul>
+        <p>
+          Our vision is to expand nationwide, so talent from all regions can
+          benefit from our ecosystem.
+        </p>
+        <a href="Campuses.html" class="btn">View Campuse</a>
+      </div>
+      <div class="image">
+        <img src="download (2).jpeg" alt="Campuses" />
+      </div>
+    </section>
+
+<footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="navbr.js"></script>
+  </body>
+</html>

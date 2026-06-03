@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Teqtronics Faisalabad — Student Registration (NAVTTC/PMYSDP)
+    </title>
+    <link rel="stylesheet" href="Styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --card: #f9fafb;
+        --muted: #6b7280;
+        --text: #0d0d0e;
+        --accent: #eb2549;
+        --accent-2: #f63b3b;
+        --danger: #dc2626;
+        --success: #16a34a;
+        --warning: #d97706;
+        --ring: rgba(59, 130, 246, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: clamp(22px, 3.6vw, 32px);
+        margin: 8px 0;
+      }
+      .sub {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      form {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .col-12 {
+        grid-column: span 12;
+      }
+      .col-6 {
+        grid-column: span 12;
+      }
+      @media (min-width: 700px) {
+        .col-6 {
+          grid-column: span 6;
+        }
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      .req {
+        color: var(--warning);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s;
+      }
+      textarea {
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--ring);
+      }
+
+      .hint {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .error {
+        font-size: 12px;
+        color: var(--danger);
+        margin-top: 4px;
+        display: none;
+      }
+
+      .field.invalid .error {
+        display: block;
+      }
+      .field.invalid input,
+      .field.invalid select,
+      .field.invalid textarea {
+        border-color: var(--danger);
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+      }
+
+      .files {
+        border: 1px dashed #d1d5db;
+        padding: 14px;
+        border-radius: 8px;
+        background: #f3f4f6;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        appearance: none;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 18px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 14px;
+        transition: transform 0.06s ease, box-shadow 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(235, 37, 60, 0.3);
+      }
+      .btn-primary:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-secondary {
+        background: #f9fafb;
+        color: var(--text);
+        border: 1px solid #d1d5db;
+      }
+
+      button:active {
+        transform: translateY(1px);
+      }
+
+      .footer-note {
+        color: var(--muted);
+        text-align: center;
+        font-size: 12px;
+        margin-top: 18px;
+      }
+
+      .row-title {
+        grid-column: span 12;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--muted);
+        margin-top: 10px;
+        text-transform: uppercase;
+      }
+
+      .preview {
+        display: flex;
+        gap: 12px;
+        margin-top: 8px;
+      }
+      .preview img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+      }
+
+      .success-banner {
+        display: none;
+        margin: 16px 0 0;
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: #ecfdf5;
+        border: 1px solid #bbf7d0;
+        color: var(--success);
+        font-size: 14px;
+      }
+      .success-banner.show {
+        display: block;
+      }
+
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+       
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+          <li><a id="mean" href="Myteam.html">Our Team</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <header>
+        <span class="badge">Teqtronics Systems</span>
+        <h1>Student Registration Form</h1>
+        <p class="sub">
+          03 Months Government Sponsored Free Training Courses (Hi‑Tech Field) —
+          NAVTTC (PMYSDP)
+        </p>
+      </header>
+
+      <form id="registrationForm" novalidate>
+        <div class="grid">
+          <div class="row-title">Personal Information</div>
+
+          <div class="field col-6">
+            <label for="candidateName"
+              >Candidate Name (According to CNIC)
+              <span class="req">*</span></label
+            >
+            <input
+              id="candidateName"
+              name="candidateName"
+              type="text"
+              required
+              minlength="3"
+              maxlength="60"
+            />
+            <p class="error">
+              Please enter your full name as per CNIC (3–60 characters).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="fatherName"
+              >Father Name <span class="req">*</span></label
+            >
+            <input
+              id="fatherName"
+              name="fatherName"
+              type="text"
+              required
+              minlength="3"
+              maxlength="60"
+            />
+            <p class="error">
+              Please enter a valid father name (3–60 characters).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="cnic"
+              >CNIC / B-Form (Without Dashes) <span class="req">*</span></label
+            >
+            <input
+              id="cnic"
+              name="cnic"
+              type="number"
+              inputmode="numeric"
+              pattern="^\d{13}$"
+              placeholder="13 digits, e.g. 1234512345671"
+              required
+            />
+            <p class="hint">Must be exactly 13 digits with no dashes.</p>
+            <p class="error">
+              CNIC/B-Form must be exactly 13 digits (no dashes).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="branch">Branch <span class="req">*</span></label>
+            <select id="branch" name="branch" required>
+              <option value="">— Select Branch —</option>
+              <option value="Faisalabad">Faisalabad</option>
+              <option value="Faisalabad">Shahdara</option>
+              <option value="Faisalabad">Kasur</option>
+              <option value="Faisalabad">Bahawalpur</option>
+              <option value="Faisalabad">Quetta</option>
+            </select>
+            <p class="error">Please select a branch.</p>
+          </div>
+
+          <div class="field col-6">
+            <label for="dob">Date of Birth <span class="req">*</span></label>
+            <input id="dob" name="dob" type="date" required />
+            <p class="hint">
+              Format: mm/dd/yyyy (device calendar supported). Minimum age 15
+              years.
+            </p>
+            <p class="error">
+              Please choose a valid Date of Birth (minimum age 15).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="studentPhone"
+              >Student's Phone Number <span class="req">*</span></label
+            >
+            <input
+              id="studentPhone"
+              name="studentPhone"
+              type="number"
+              inputmode="numeric"
+              pattern="^03\d{9}$"
+              placeholder="11 digits, starts with 03"
+              required
+            />
+            <p class="hint">Pak mobile format, e.g. 03XXXXXXXXX (11 digits).</p>
+            <p class="error">
+              Enter a valid mobile number starting with 03 (11 digits).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="altPhone">Alternative Phone Number</label>
+            <input
+              id="altPhone"
+              name="altPhone"
+              type="number"
+              inputmode="numeric"
+              pattern="^03\d{9}$"
+              placeholder="Optional — 03XXXXXXXXX"
+            />
+            <p class="error">
+              If provided, must start with 03 and be 11 digits.
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="email">E‑Mail <span class="req">*</span></label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+            <p class="error">Please enter a valid email address.</p>
+          </div>
+
+          <div class="field col-6">
+            <label for="domicile">Domicile</label>
+            <input id="domicile" name="domicile" type="text" maxlength="40" />
+          </div>
+
+          <div class="field col-12">
+            <label for="address"
+              >Complete Address <span class="req">*</span></label
+            >
+            <textarea
+              id="address"
+              name="address"
+              placeholder="House No, Street, Town/City, District"
+              required
+              minlength="10"
+              maxlength="200"
+            ></textarea>
+            <p class="error">
+              Please enter a complete address (10–200 characters).
+            </p>
+          </div>
+
+          <div class="row-title">Education & Preferences</div>
+
+          <div class="field col-6">
+            <label for="education">Education <span class="req">*</span></label>
+            <select id="education" name="education" required>
+              <option value="">Select Qualification</option>
+              <option>FA/FSC/ICS/I.Com</option>
+              <option>BA/BSC/B.COM</option>
+              <option>BS/MSC/M.COM</option>
+            </select>
+            <p class="error">Please select your highest qualification.</p>
+          </div>
+
+          <div class="field col-6" id="otherEduWrap" style="display: none">
+            <label for="otherEducation">Other Education</label>
+            <input
+              id="otherEducation"
+              name="otherEducation"
+              type="text"
+              placeholder="Specify your qualification"
+              maxlength="60"
+            />
+            <p class="error">
+              Please describe your qualification (at least 3 characters).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="pref1"
+              >First Preference <span class="req">*</span></label
+            >
+            <select id="pref1" name="pref1" required>
+              <option value="">— Select First Preference —</option>
+              <option>Cloud Computing — Azure</option>
+              <option>Cloud Computing — AWS</option>
+              <option>Full Stack Development</option>
+              <option>
+                JavaScript Full Stack Development (e.g. Mean/Mern)
+              </option>
+              <option>Digital Forensic & Cyber Security</option>
+              <option>Cyber Security (CEH , CHFI)</option>
+              <option>
+                Google UX Design/Graphic Designing (UI/UX Designer)
+              </option>
+              <option>Advance Python Programming & Applications</option>
+              <option>Advanced Web Application Development</option>
+            </select>
+            <p class="error">Please select your first preference.</p>
+          </div>
+
+          <div class="field col-6">
+            <label for="pref2">Second Preference</label>
+            <select id="pref2" name="pref2">
+              <option value="">— Select Second Preference —</option>
+              <option>Cloud Computing — Azure</option>
+              <option>Cloud Computing — AWS</option>
+              <option>Full Stack Development</option>
+              <option>
+                JavaScript Full Stack Development (e.g. Mean/Mern)
+              </option>
+              <option>Digital Forensic & Cyber Security</option>
+              <option>Cyber Security (CEH , CHFI)</option>
+              <option>
+                Google UX Design/Graphic Designing (UI/UX Designer)
+              </option>
+              <option>Advance Python Programming & Applications</option>
+              <option>Advanced Web Application Development</option>
+            </select>
+          </div>
+
+          <div class="row-title">Required Uploads</div>
+
+          <div class="field col-6">
+            <label for="passportPhoto"
+              >Upload Your Passport Size Picture
+              <span class="req">*</span></label
+            >
+            <div class="files">
+              <input
+                id="passportPhoto"
+                name="passportPhoto"
+                type="file"
+                accept="image/*"
+                required
+              />
+              <div class="hint">JPG/PNG only, max 2 MB.</div>
+              <div class="preview" id="photoPreview" aria-live="polite"></div>
+            </div>
+            <p class="error">
+              Please upload a passport size photo (JPG/PNG, ≤ 2 MB).
+            </p>
+          </div>
+
+          <div class="field col-6">
+            <label for="cnicFront"
+              >Upload Your Front CNIC Picture <span class="req">*</span></label
+            >
+            <div class="files">
+              <input
+                id="cnicFront"
+                name="cnicFront"
+                type="file"
+                accept="image/*"
+                required
+              />
+              <div class="hint">JPG/PNG only, max 2 MB.</div>
+            </div>
+            <p class="error">
+              Please upload the front side of your CNIC (JPG/PNG, ≤ 2 MB).
+            </p>
+          </div>
+
+          <div class="col-12 actions">
+            <button type="submit" class="btn-primary">
+              Submit Registration
+            </button>
+            <button type="reset" class="btn-secondary" id="resetBtn">
+              Reset
+            </button>
+          </div>
+
+          <div id="success" class="success-banner">
+            🎉 Your form looks good! (Demo) Data is validated on the
+            client-side. Connect to a backend to store it.
+          </div>
+
+          <p class="footer-note col-12">
+            NAVTTC (PMYSDP) — Teqtronics Systems Faisalabad • This is a demo form
+            with robust client‑side validation.
+          </p>
+        </div>
+      </form>
+    </div>
+   <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script>
+      (function () {
+        const form = document.getElementById("registrationForm");
+        const success = document.getElementById("success");
+        const resetBtn = document.getElementById("resetBtn");
+
+        // Enforce minimum age 15 by setting max date dynamically
+        const dob = document.getElementById("dob");
+        const today = new Date();
+        const minAge = 15;
+        const maxDOB = new Date(
+          today.getFullYear() - minAge,
+          today.getMonth(),
+          today.getDate()
+        );
+        dob.max = maxDOB.toISOString().split("T")[0];
+
+        // Show/hide Other Education
+        const education = document.getElementById("education");
+        const otherEduWrap = document.getElementById("otherEduWrap");
+        const otherEducation = document.getElementById("otherEducation");
+        education.addEventListener("change", () => {
+          const show = education.value === "Other";
+          otherEduWrap.style.display = show ? "block" : "none";
+          otherEducation.required = show;
+          if (!show) {
+            otherEducation.value = "";
+            otherEduWrap.classList.remove("invalid");
+          }
+        });
+
+        // Basic helpers
+        const setInvalid = (el, condition) => {
+          const field = el.closest(".field");
+          if (!field) return;
+          if (condition) field.classList.add("invalid");
+          else field.classList.remove("invalid");
+        };
+
+        const fileOk = (file) => {
+          if (!file) return false;
+          const validTypes = ["image/jpeg", "image/png", "image/jpg"];
+          const typeOK = validTypes.includes(file.type);
+          const sizeOK = file.size <= 2 * 1024 * 1024; // 2MB
+          return typeOK && sizeOK;
+        };
+
+        // Live validations
+        const candidateName = document.getElementById("candidateName");
+        candidateName.addEventListener("input", () =>
+          setInvalid(candidateName, candidateName.value.trim().length < 3)
+        );
+
+        const fatherName = document.getElementById("fatherName");
+        fatherName.addEventListener("input", () =>
+          setInvalid(fatherName, fatherName.value.trim().length < 3)
+        );
+
+        const cnic = document.getElementById("cnic");
+        cnic.addEventListener("input", () =>
+          setInvalid(cnic, !/^\d{13}$/.test(cnic.value))
+        );
+
+        const branch = document.getElementById("branch");
+        branch.addEventListener("change", () =>
+          setInvalid(branch, !branch.value)
+        );
+
+        const studentPhone = document.getElementById("studentPhone");
+        studentPhone.addEventListener("input", () =>
+          setInvalid(studentPhone, !/^03\d{9}$/.test(studentPhone.value))
+        );
+
+        const altPhone = document.getElementById("altPhone");
+        altPhone.addEventListener("input", () =>
+          setInvalid(
+            altPhone,
+            altPhone.value && !/^03\d{9}$/.test(altPhone.value)
+          )
+        );
+
+        const email = document.getElementById("email");
+        email.addEventListener("input", () =>
+          setInvalid(email, !email.validity.valid)
+        );
+
+        const address = document.getElementById("address");
+        address.addEventListener("input", () =>
+          setInvalid(address, address.value.trim().length < 10)
+        );
+
+        dob.addEventListener("change", () => {
+          const d = new Date(dob.value);
+          const tooYoung = isNaN(d) || d > maxDOB;
+          setInvalid(dob, tooYoung);
+        });
+
+        const pref1 = document.getElementById("pref1");
+        pref1.addEventListener("change", () => setInvalid(pref1, !pref1.value));
+
+        const pref2 = document.getElementById("pref2");
+        pref2.addEventListener("change", () => {
+          // Prevent duplicate selection (if both selected)
+          if (pref2.value && pref1.value && pref2.value === pref1.value) {
+            setInvalid(pref2, true);
+          } else {
+            setInvalid(pref2, false);
+          }
+        });
+
+        // File previews & validation
+        const passportPhoto = document.getElementById("passportPhoto");
+        const cnicFront = document.getElementById("cnicFront");
+        const photoPreview = document.getElementById("photoPreview");
+
+        passportPhoto.addEventListener("change", () => {
+          photoPreview.innerHTML = "";
+          const file = passportPhoto.files[0];
+          if (!file || !fileOk(file)) {
+            setInvalid(passportPhoto, true);
+            return;
+          }
+          setInvalid(passportPhoto, false);
+          const img = document.createElement("img");
+          img.alt = "Passport photo preview";
+          img.src = URL.createObjectURL(file);
+          photoPreview.appendChild(img);
+        });
+
+        cnicFront.addEventListener("change", () => {
+          const file = cnicFront.files[0];
+          setInvalid(cnicFront, !fileOk(file));
+        });
+
+        // Submit
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Trigger built-in validation UI
+          const elements = Array.from(form.elements).filter((el) =>
+            ["INPUT", "SELECT", "TEXTAREA"].includes(el.tagName)
+          );
+          elements.forEach((el) => {
+            if (el.type === "file") {
+              setInvalid(el, !fileOk(el.files[0]));
+            } else if (el.id === "dob") {
+              const d = new Date(dob.value);
+              setInvalid(dob, isNaN(d) || d > maxDOB);
+            } else if (el.id === "altPhone" && !el.value) {
+              setInvalid(el, false);
+            } else if (
+              el.id === "otherEducation" &&
+              otherEduWrap.style.display === "block"
+            ) {
+              setInvalid(el, el.value.trim().length < 3);
+            } else if (el.pattern) {
+              const re = new RegExp(el.pattern);
+              setInvalid(el, !re.test(el.value));
+            } else if (el.required) {
+              setInvalid(el, !el.value.trim());
+            }
+          });
+
+          // Any invalid?
+          const invalid = form.querySelector(".field.invalid");
+          if (invalid) {
+            invalid.scrollIntoView({ behavior: "smooth", block: "center" });
+            success.classList.remove("show");
+            return;
+          }
+
+          // If everything is valid, display a success banner and show JSON payload (demo)
+          success.classList.add("show");
+
+          const payload = new FormData(form);
+          const json = {};
+          payload.forEach((v, k) => {
+            // Skip files in JSON demo
+            if (v instanceof File) return;
+            json[k] = v;
+          });
+          console.log("Validated payload (demo):", json);
+          alert(
+            "Form validated successfully! (Demo) — Check console for payload."
+          );
+        });
+
+        // Reset state
+        resetBtn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".field.invalid")
+            .forEach((n) => n.classList.remove("invalid"));
+          otherEduWrap.style.display = "none";
+          otherEducation.required = false;
+          photoPreview.innerHTML = "";
+          success.classList.remove("show");
+        });
+      })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="navbr.js"></script>
+  </body>
+</html>

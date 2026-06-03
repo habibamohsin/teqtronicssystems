@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teqtronics - Data Forensics & Cyber Security Bootcamp</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <style>
+      .bootcamp-section {
+        background: linear-gradient(
+            rgba(132, 19, 19, 0.9),
+            rgba(84, 13, 17, 0.9)
+          ),
+          url("./forensic.jpg") no-repeat center/cover;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+     <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+       
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="bootcamp-section">
+      <h1>Data Forensics & Cyber Security Bootcamp</h1>
+
+      <div class="details">
+        <div class="detail-box">
+          <span class="icon-ring"
+            ><i class="fa-regular fa-calendar-days"></i
+          ></span>
+          <span>Starting From: <strong>Oct 2, 2025</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-clock"></i></span>
+          <span>Duration: <strong>4 Months + 6 Months Support</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-user"></i></span>
+          <span>Mode Of Training: <strong>Online & On Campus</strong></span>
+        </div>
+      </div>
+
+      <button class="apply-btn"><a href="Enroll.html">— APPLY NOW</a></button>
+
+      <!-- Features Section -->
+      <div class="features container">
+        <div class="feature-col">
+          <div class="feature-item">
+            Fundamentals of Cyber Security & Digital Forensics
+          </div>
+          <div class="feature-item">
+            Hands-on Ethical Hacking & Penetration Testing
+          </div>
+          <div class="feature-item">
+            Network Security & Traffic Analysis with Wireshark
+          </div>
+          <div class="feature-item">
+            Incident Response & Threat Intelligence
+          </div>
+        </div>
+        <div class="feature-col">
+          <div class="feature-item">Malware Analysis & Data Recovery</div>
+          <div class="feature-item">Cyber Crime Laws & Legal Frameworks</div>
+          <div class="feature-item">
+            Get Professional Certificates on Completion
+          </div>
+          <div class="feature-item">Trainer & Community Support (Online)</div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="heading">
+      Want to Become an Expert in Cyber Security & Forensics?
+    </h2>
+
+    <section class="modules">
+      <h3>Module Breakdown</h3>
+      <p>
+        Here’s what you’ll cover while building
+        <strong>practical Cyber Security & Forensics skills</strong>.
+      </p>
+
+      <div class="module-box">
+        <div class="module-number">1</div>
+        <div class="module-content">
+          <h4>Introduction to Cyber Security & Forensics</h4>
+          <ul>
+            <li>Cyber Security Fundamentals</li>
+            <li>Basics of Digital Forensics</li>
+            <li>Cyber Crime Laws & Frameworks</li>
+            <li>Setting Up Investigation Lab</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">2</div>
+        <div class="module-content">
+          <h4>Digital Evidence & Data Recovery</h4>
+          <ul>
+            <li>Evidence Collection & Chain of Custody</li>
+            <li>Disk Imaging & File Recovery</li>
+            <li>Metadata & Log Analysis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">3</div>
+        <div class="module-content">
+          <h4>Network Security & Forensics</h4>
+          <ul>
+            <li>Packet Analysis using Wireshark</li>
+            <li>Intrusion Detection & Prevention</li>
+            <li>Incident Response Workflow</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">4</div>
+        <div class="module-content">
+          <h4>Ethical Hacking & Penetration Testing</h4>
+          <ul>
+            <li>Footprinting & Reconnaissance</li>
+            <li>Exploitation & Privilege Escalation</li>
+            <li>Reporting Vulnerabilities</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">5</div>
+        <div class="module-content">
+          <h4>Malware Analysis & Threat Intelligence</h4>
+          <ul>
+            <li>Understanding Malware Types</li>
+            <li>Sandboxing & Static Analysis</li>
+            <li>Threat Intelligence Gathering</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">6</div>
+        <div class="module-content">
+          <h4>Cyber Security Projects & Career Prep</h4>
+          <ul>
+            <li>End-to-End Forensic Investigation</li>
+            <li>Incident Response Case Study</li>
+            <li>Portfolio & Certification Roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="heading">Why Join This Cyber Security Bootcamp?</h2>
+    <section class="benefits">
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <i class="fas fa-fingerprint"></i>
+          <h4>Digital Forensics</h4>
+          <p>Investigate, analyze, and recover data from digital devices.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Cyber Defense</h4>
+          <p>Protect systems against malware, ransomware & advanced threats.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-user-secret"></i>
+          <h4>Ethical Hacking</h4>
+          <p>Hands-on penetration testing & vulnerability assessments.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-network-wired"></i>
+          <h4>Network Security</h4>
+          <p>Detect, monitor & analyze suspicious traffic effectively.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-database"></i>
+          <h4>Data Security</h4>
+          <p>Encryption, hashing & secure storage strategies.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-briefcase"></i>
+          <h4>Career Support</h4>
+          <p>
+            Certification prep, freelancing roadmap & job interview coaching.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="navbr.js"></script>
+  </body>
+</html>

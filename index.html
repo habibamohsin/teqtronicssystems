@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teqtronics - Your Technology Partner</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <style>
+    /* Custom Glow Animation */
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.7),
+          0 0 20px rgba(239, 68, 68, 0.6);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(239, 68, 68, 1),
+          0 0 40px rgba(239, 68, 68, 0.8);
+        transform: scale(1.05);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.7),
+          0 0 20px rgba(239, 68, 68, 0.6);
+        transform: scale(1);
+      }
+    }
+
+    .animate-bounce-glow {
+      animation: glowPulse 2s infinite;
+    }
+  </style>
+  <style>
+    li {
+      list-style-type: none;
+    }
+
+    @media (min-width: 768px) {
+      /* .navbar-top {
+        height: 42px;
+      } */
+      .imgsu {
+        margin-top: -1%;
+      }
+      /* .navbar-bottom {
+        height: 82px;
+      } */
+    }
+  </style>
+
+  <body class="bg-white">
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+        
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section
+      class="relative flex flex-col md:flex-row items-center justify-between overflow-hidden"
+    >
+      <!-- Right Carousel with Angled BG -->
+      <div
+        class="relative w-full md:w-1/2 h-64 md:h-[350px] angled-bg bg-gradient-to-br from-orange-400 to-yellow-500 overflow-hidden"
+      >
+        <div class="relative w-full h-full overflow-hidden">
+          <!-- Carousel Images -->
+          <img
+            src="/Images/teqtronics slide 1.png"
+            class="fade-slide active absolute inset-0 w-full h-full object-cover"
+            alt="Slide 1"
+          />
+
+          <img
+            src="Blue and White Modern Online Course Poster A2.png"
+            class="fade-slide absolute inset-0 w-full h-full object-cover"
+            alt="Slide 2"
+          />
+
+          <img
+            src="Blue White Simple Online Course Landscape.png"
+            class="fade-slide absolute inset-0 w-full h-full object-cover"
+            alt="Slide 3"
+          />
+        </div>
+
+        <!-- Buttons -->
+        <button
+          class="prev absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/60"
+        >
+          ❮
+        </button>
+        <button
+          class="next absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/60"
+        >
+          ❯
+        </button>
+      </div>
+
+      <!-- Left Content -->
+      <div class="relative z-10 w-full md:w-1/2 px-6 md:px-16 py-16 space-y-6">
+        <h1
+          class="text-4xl md:text-5xl font-extrabold leading-tight text-red-600"
+        >
+          Learn and Earn with <span class="text-[#0d0d0e]">Teqtronics</span>
+        </h1>
+        <p class="text-lg text-gray-700">
+          Teqtronics is a leading training initiative in Pakistan dedicated to empowering individuals through free online courses in freelancing and digital skills. In collaboration with Virtual University (VU) and Ignite, the program provides recognized E-Certificates to successful participants. Since its launch in 2018, Teqtronics has successfully delivered 4.5+ million trainings, playing a vital role in building a future-ready workforce and strengthening Pakistan’s digital economy
+        </p>
+        <div class="mt-6 flex gap-6">
+          <!-- Join Button -->
+          <a
+            href="Enroll.html"
+            class="inline-block bg-red-500 hover:bg-red-600 text-white text-lg max-[412px]:text-sm font-semibold px-8 max-[412px]:px-5 py-3 max-[412px]:py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out animate-bounce-glow"
+          >
+            Enroll Now →
+          </a>
+
+          <!-- Campuses Button -->
+          <a
+            href="Contact.html"
+            class="inline-block bg-[#0d0d0e] hover:bg-[#000] text-white text-lg max-[412px]:text-sm font-semibold px-8 max-[412px]:px-5 py-3 max-[412px]:py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+          >
+            Contact us →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <!-- 🔁 Duplicate logos inside this .marquee-content -->
+        <div class="marquee-content">
+          <img
+            src="PMYP-removebg-preview.png"
+            alt="Prime Minister Youth Program"
+            style="height: 50px"
+          />
+          <img src="channels4_profile-removebg-preview.png" alt="Navttc" />
+          <img src="images-removebg-preview.png" alt="PSEB" />
+          <img src="AWS-partner.png" alt="AWS" style="height: 40px" />
+          <img src="GCP.png" alt="Google Cloud Partner" />
+
+          <!-- 🔁 Repeat exact same logos -->
+          <img
+            src="PMYP-removebg-preview.png"
+            alt="Prime Minister Youth Program"
+            style="height: 50px"
+          />
+          <img src="channels4_profile-removebg-preview.png" alt="Navttc" />
+          <img src="images-removebg-preview.png" alt="PSEB" />
+          <img src="AWS-partner.png" alt="AWS" style="height: 40px" />
+          <img src="GCP.png" alt="Googe Cloud Partner" />
+
+          <!-- 🔁 Repeat one more time exact same logos -->
+          <img
+            src="PMYP-removebg-preview.png"
+            alt="Prime Minister Youth Program"
+            style="height: 50px"
+          />
+          <img src="channels4_profile-removebg-preview.png" alt="Navttc" />
+          <img src="images-removebg-preview.png" alt="PSEB" />
+          <img src="AWS-partner.png" alt="AWS" style="height: 40px" />
+          <img src="GCP.png" alt="Googe Cloud Partner" />
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <!-- Left Content -->
+      <div
+        class="left"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0"
+        data-aos-duration="700"
+      >
+        <h1>About Teqtronics</h1>
+        <p>
+  Teqtronics is among Pakistan’s largest skill-development training programs,
+  providing best <span class="highlight">Free Online Courses</span> in freelancing
+  and digital technologies. Learners earn E-Certificates from Virtual University (VU)
+  and Ignite, ensuring credibility and recognition. Since 
+  <span class="highlight">2018</span>, the program has delivered more than 
+  <span class="highlight">4.5 Million + trainings</span>, helping individuals develop 
+  in-demand skills and supporting the growth of Pakistan’s digital workforce 
+  and economy.
+</p>
+
+        <a href="About.html" class="btn">View More ➔</a>
+      </div>
+
+      <!-- Right Cards -->
+      <div class="right">
+        <div class="card" data-aos="fade-up" data-aos-duration="700">
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/idea.png"
+            alt="Idea Icon"
+          />
+          <a href="About.html#WIT"
+            ><div class="title"><span>What</span> is Teqtronics?</div></a
+          >
+        </div>
+        <div
+          class="card"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="700"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/question-mark.png"
+            alt="Why Icon"
+          />
+
+          <a href="About.html#WJT"
+            ><div class="title"><span>Why</span> Join Teqtronics?</div></a
+          >
+        </div>
+        <div
+          class="card"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="700"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/100/f7941e/user.png"
+            alt="Who Icon"
+          />
+          <a href="About.html#WCJ"
+            ><div class="title"><span>Who</span> Should Join?</div></a
+          >
+        </div>
+        <div
+          class="card orange"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="700"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/cursor.png"
+            alt="Join Now Icon"
+          />
+          <a href="Enroll.html">
+            <div class="title">Join Now</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="sections"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="700"
+    >
+      <h1 class="heading">Our Progress</h1>
+      <div class="dots"></div>
+
+      <div class="statContainer">
+        <div class="container">
+          <span>
+            <svg
+              width="78px"
+              height="78px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="myIcon"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          <div class="containerContent">
+            <div class="number counter" data-target="85000">0</div>
+            <div class="label">High Tech Beneficiaries</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <span
+            ><svg
+              class="myIcon"
+              fill="currentColor"
+              height="78px"
+              width="78px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 460.873 460.873"
+              xml:space="preserve"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path
+                    d="M216.5,80.169c22.102,0,40.084-17.982,40.084-40.084C256.584,17.982,238.602,0,216.5,0 c-22.097,0-40.074,17.982-40.074,40.084C176.426,62.187,194.403,80.169,216.5,80.169z"
+                  ></path>
+                  <path
+                    d="M386.039,180.178l-28.902-28.9c-1.649-1.649-3.849-2.558-6.193-2.558c-2.345,0-4.544,0.909-6.193,2.558l-8.463,8.462 c-0.348-0.406-0.694-0.811-1.076-1.193c-3.623-3.625-8.435-5.703-13.635-5.961c-0.309-0.535-0.643-1.06-1.017-1.569l-13.768-18.771 c-3.971-5.414-11.031-12.517-16.425-16.521l-36.486-27.085c-1.164-0.858-5.064-3.34-9.269-3.34c0,0-51.336,0.012-51.436,0.015 c-5.96,0.129-10.318,3.365-13.304,9.898l-15.724,34.394c-0.333,0.422-1.266,1.188-1.744,1.432l-32.047,7.624 c-4.408,1.049-8.144,3.751-10.519,7.609c-2.375,3.858-3.105,8.411-2.057,12.818c1.826,7.678,8.606,13.04,16.488,13.04 c1.317,0,2.643-0.156,3.939-0.464l32.354-7.697c10.027-2.385,20.022-10.598,24.307-19.971l1.338-2.926l8.72,34.247l-22.551,19.587 c-8.741,7.591-13.23,20.817-10.916,32.163l10.453,51.215c1.693,8.293,9.056,14.312,17.507,14.311c1.199,0,2.408-0.123,3.594-0.364 c9.662-1.973,15.918-11.438,13.946-21.1l-10.209-50.018l23.322-20.257c0.619-0.538,1.174-1.119,1.701-1.719h17.158l11.561,43.137 c1.673,6.241,5.252,15.227,8.325,20.902l25.384,46.884c3.132,5.781,9.164,9.373,15.743,9.373c0.322,0,0.646-0.009,0.968-0.026 c2.647-0.145,5.183-0.862,7.531-2.134c8.672-4.695,11.908-15.57,7.214-24.243l-25.387-46.886c-1.771-3.272-4.264-9.531-5.231-13.14 l-24.252-89.539c2.739,2.196,6.808,6.338,8.645,8.844l13.767,18.771c1.191,1.623,2.651,3.002,4.297,4.091 c-0.101,5.763,2.01,11.112,5.993,15.095c0.381,0.381,0.785,0.731,1.191,1.078l-8.461,8.46c-3.415,3.415-3.415,8.973,0,12.388 l28.9,28.9c1.65,1.649,3.849,2.558,6.193,2.558h0.001c2.343,0,4.542-0.909,6.192-2.558l48.529-48.527 C389.454,189.15,389.454,183.593,386.039,180.178z M310.851,182.906c-1.358-1.358-2.266-3.061-2.688-4.944 c3.16-0.234,6.162-1.339,8.748-3.235c3.834-2.811,6.133-6.943,6.748-11.316c1.587,0.482,3.021,1.326,4.191,2.496 c0.384,0.384,0.721,0.802,1.033,1.236l-16.797,16.797C311.652,183.627,311.234,183.289,310.851,182.906z"
+                  ></path>
+                  <path
+                    d="M140.952,260.554H82.567c-5.677,0-10.295,4.618-10.295,10.294v179.73c0,5.676,4.618,10.294,10.295,10.294h58.385 c5.677,0,10.295-4.618,10.295-10.294v-179.73C151.247,265.172,146.629,260.554,140.952,260.554z"
+                  ></path>
+                  <path
+                    d="M233.718,299.512h-58.385c-5.677,0-10.295,4.618-10.295,10.294v140.772c0,5.676,4.618,10.294,10.295,10.294h58.385 c5.677,0,10.295-4.618,10.295-10.294V309.806C244.013,304.13,239.394,299.512,233.718,299.512z"
+                  ></path>
+                  <path
+                    d="M326.48,325.506h-58.382c-5.677,0-10.295,4.618-10.295,10.294v114.778c0,5.676,4.618,10.294,10.295,10.294h58.382 c5.677,0,10.296-4.618,10.296-10.294V335.8C336.776,330.124,332.157,325.506,326.48,325.506z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <div class="containerContent">
+            <div class="number counter" data-target="65000">0</div>
+            <div class="label">Conventional Beneficiaries</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <span>
+            <svg
+              class="myIcon"
+              width="78px"
+              height="78px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M9 4H6C4.89543 4 4 4.89543 4 6V14C4 15.1046 4.89543 16 6 16H18C19.1046 16 20 15.1046 20 14V12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M15 4L13 6L15 8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M19 4L21 6L19 8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 16V20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M8 20H16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          <div class="containerContent">
+            <div class="number counter" data-target="12000">0</div>
+            <div class="label">Hi- End Beneficiaries</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <span>
+            <svg
+              class="myIcon"
+              width="78px"
+              height="78px"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>certificate-ssl</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="invisible_box" data-name="invisible box">
+                    <rect width="48" height="48" fill="none"></rect>
+                    <rect width="48" height="48" fill="none"></rect>
+                  </g>
+                  <g id="icons_Q2" data-name="icons Q2">
+                    <g>
+                      <path
+                        d="M20,39H6V9H40a2,2,0,0,0,0-4H4A2,2,0,0,0,2,7V41a2,2,0,0,0,2,2H20a2,2,0,0,0,0-4Z"
+                      ></path>
+                      <path
+                        d="M46,24A13,13,0,0,0,33,11a12.8,12.8,0,0,0-8.3,3H12a2,2,0,0,0,0,4h9.5a11.1,11.1,0,0,0-1.3,4H12a2,2,0,0,0,0,4h8.2a11.1,11.1,0,0,0,1.3,4H12a2,2,0,0,0,0,4H24.7l1.3.9v9.7A2.3,2.3,0,0,0,28,47a1.8,1.8,0,0,0,1.3-.6L33,43l3.7,3.4A1.8,1.8,0,0,0,38,47a2.3,2.3,0,0,0,2-2.4V35A13.2,13.2,0,0,0,46,24ZM36,32.5v7.8l-3-2.8-3,2.8V32.5A9.1,9.1,0,0,1,24,24a9,9,0,0,1,18,0A9.1,9.1,0,0,1,36,32.5Z"
+                      ></path>
+                      <circle cx="33" cy="24" r="5"></circle>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <div class="containerContent">
+            <div class="number counter" data-target="45000">0</div>
+            <div class="label">Total Trained </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br /><br />
+
+    <center>
+      <h1 class="p9">EMPOWER YOUR FUTURE</h1>
+      <p class="p10">Unlock Skills, Build Careers with Our Courses</p>
+    </center>
+
+    <div
+      class="line2"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      <a href="cyber.html">
+        <div class="cards">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Cyber Security</h3>
+        </div>
+      </a>
+      <a href="python.html">
+        <div class="cards">
+          <i class="fab fa-python"></i>
+          <h3>Advanced Python</h3>
+        </div>
+      </a>
+      <a href="google.html">
+        <div class="cards">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>Google UI / UX</h3>
+        </div>
+      </a>
+    </div>
+
+    <div
+      class="line1"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      <a href="advanced.html">
+        <div class="cards">
+          <i class="fas fa-code"></i>
+          <h3>Advanced Web Development</h3>
+        </div>
+      </a>
+      <a href="data.html">
+        <div class="cards">
+          <i class="fas fa-fingerprint"></i>
+          <h3>Data Forensic & Cyber Security</h3>
+        </div>
+      </a>
+      <a href="web.html">
+        <div class="cards">
+          <i class="fas fa-network-wired"></i>
+          <h3>Full Stack Web Development</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- NEW ROW -->
+    <div
+      class="line3"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      <a href="digital.html"
+        ><div class="cards">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Digital Marketing</h3>
+        </div></a
+      >
+      <a href="graphic.html"
+        ><div class="cards">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Graphic Designing</h3>
+        </div></a
+      >
+      <a href="computing.html"
+        ><div class="cards">
+          <i class="fas fa-cloud"></i>
+          <h3>Cloud Computing</h3>
+        </div></a
+      >
+    </div>
+
+    <section id="SR">
+      <section class="review-section" data-aos="zoom-in">
+        <h2>Student Reviews</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="review-card">
+              <img src="No one.jpg" alt="Student 1" />
+              <h3>Syed Faizan</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Teqtronics has been my go-to place to stay updated with modern tech
+                trends and devices. The website is neatly organized and very
+                resourceful.
+              </p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="review-card">
+              <img src="No one.jpg" alt="Student 2" />
+              <h3>Muhammad Awais</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                The courses here are interactive and well-structured. The team
+                is very supportive and ensures you understand every concept
+                clearly.
+              </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="review-card">
+              <img src="No one.jpg" alt="Student 3" />
+              <h3>Bilal Nadeem</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Amazing platform! I learned so much in a short time. Definitely
+                recommend it to anyone who wants to enhance their tech skills.
+              </p>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <button class="carousel-btn btn-prev">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button class="carousel-btn btn-next">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section id="hero">
+      <!-- Particle background container -->
+      <div id="particles-js"></div>
+
+      <!-- Hero content -->
+      <div class="hero-content" data-aos="zoom-in">
+        <h1>Empowering Futures Through a Legacy of Skills and Employability</h1>
+
+        <a href="Enroll.html"><button class="btn">Enroll Now</button></a>
+      </div>
+    </section>
+
+    <section id="FAQ" data-aos="zoom-in-down">
+      <section class="faq-section">
+        <h2 class="faq-title">Student FAQs</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is Teqtronics Institute?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Teqtronics Institute is a leading IT training center offering programs
+            in Web Development, AI, Cybersecurity, Data Science, and more. Our
+            mission is to empower students with real-world tech skills.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What courses do you offer?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            We provide Full Stack Development, Mobile App Development, Cloud
+            Computing, Graphic Designing, and Digital Marketing courses — all
+            designed with the latest industry standards.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Are your courses beginner-friendly?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Absolutely! Our courses are structured for all levels. Beginners get
+            step-by-step guidance, while advanced learners gain deep technical
+            expertise through hands-on projects.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you provide certifications?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, after completing a course you’ll receive an industry-recognized
+            certificate from Techub Institute, which enhances your professional
+            credibility and job opportunities.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I enroll in a course?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Simply visit our website, select your preferred course, and register
+            online. Our support team is also available to guide you through the
+            enrollment process.
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      const slides = document.querySelectorAll(".fade-slide");
+      let index = 0;
+
+      function showSlide(n) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[n].classList.add("active");
+      }
+
+      document.querySelector(".next").addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+
+      document.querySelector(".prev").addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+
+      // Auto Slide
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 4000);
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="navbr.js"></script>
+  </body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teqtronics - Digital Marketing Course</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <style>
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .bootcamp-section {
+        background: linear-gradient(
+            rgba(173, 27, 27, 0.9),
+            rgba(84, 13, 14, 0.9)
+          ),
+          url("./digital.jpg") no-repeat center/cover;
+      }
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color:#d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+        
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="bootcamp-section">
+      <h1>Digital Marketing Course</h1>
+
+      <div class="details">
+        <div class="detail-box">
+          <span class="icon-ring"
+            ><i class="fa-regular fa-calendar-days"></i
+          ></span>
+          <span>Duration: <strong>4 Months + 2 Months Support</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-clock"></i></span>
+          <span>Class Timing: <strong>Evening & Weekend Options</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-user"></i></span>
+          <span>Mode Of Training: <strong>Online & On Campus</strong></span>
+        </div>
+      </div>
+
+      <button class="apply-btn"><a href="Enroll.html">— APPLY NOW</a></button>
+
+      <!-- Features Section -->
+      <div class="features container">
+        <div class="feature-col">
+          <div class="feature-item">Learn SEO, SEM & Content Marketing</div>
+          <div class="feature-item">
+            Master Social Media Marketing (Facebook, Instagram, LinkedIn)
+          </div>
+          <div class="feature-item">Google Ads & PPC Campaigns</div>
+          <div class="feature-item">Email Marketing & Automation</div>
+        </div>
+        <div class="feature-col">
+          <div class="feature-item">Analytics & Data-Driven Marketing</div>
+          <div class="feature-item">Work on Real Business Campaigns</div>
+          <div class="feature-item">Career Guidance & Freelancing Roadmap</div>
+          <div class="feature-item">Trainer & Community Support</div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="heading">Want to Become an Expert in Digital Marketing?</h2>
+
+    <section class="modules">
+      <h3>Module Breakdown</h3>
+      <p>
+        This Digital Marketing Course will take you from a
+        <strong>beginner to a professional</strong> marketer with real
+        campaigns.
+      </p>
+
+      <div class="module-box">
+        <div class="module-number">1</div>
+        <div class="module-content">
+          <h4>SEO & Content Marketing</h4>
+          <ul>
+            <li>On-page & Off-page SEO</li>
+            <li>Keyword Research & Optimization</li>
+            <li>Content Strategy & Blogging</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">2</div>
+        <div class="module-content">
+          <h4>Social Media Marketing</h4>
+          <ul>
+            <li>Facebook & Instagram Ads</li>
+            <li>LinkedIn & Twitter Marketing</li>
+            <li>Social Media Strategies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">3</div>
+        <div class="module-content">
+          <h4>Google Ads & PPC</h4>
+          <ul>
+            <li>Google Search & Display Ads</li>
+            <li>Campaign Optimization</li>
+            <li>Remarketing & Conversions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">4</div>
+        <div class="module-content">
+          <h4>Email Marketing & Automation</h4>
+          <ul>
+            <li>Email Campaign Setup</li>
+            <li>Automation Tools</li>
+            <li>Lead Nurturing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">5</div>
+        <div class="module-content">
+          <h4>Analytics & Reporting</h4>
+          <ul>
+            <li>Google Analytics & Tag Manager</li>
+            <li>Tracking Conversions</li>
+            <li>Data-Driven Marketing Decisions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">6</div>
+        <div class="module-content">
+          <h4>Real Projects & Career Prep</h4>
+          <ul>
+            <li>Run campaigns for real businesses</li>
+            <li>Prepare for freelancing & job interviews</li>
+            <li>Build your digital marketing portfolio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="heading">Why Join This Digital Marketing Course?</h2>
+    <section class="benefits">
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>SEO & SEM Expertise</h4>
+          <p>Learn advanced SEO techniques and Google Ads management.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-bullhorn"></i>
+          <h4>Social Media Mastery</h4>
+          <p>Build strong campaigns on Facebook, Instagram, and LinkedIn.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-envelope"></i>
+          <h4>Email Marketing</h4>
+          <p>Engage audiences with professional email marketing strategies.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-chart-pie"></i>
+          <h4>Analytics & Insights</h4>
+          <p>Measure results using Google Analytics & marketing dashboards.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-project-diagram"></i>
+          <h4>Real Campaigns</h4>
+          <p>Work on real marketing projects to showcase in your portfolio.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-briefcase"></i>
+          <h4>Career Guidance</h4>
+          <p>Get freelancing, job placement, and entrepreneurship support.</p>
+        </div>
+      </div>
+    </section>
+ <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+          <div class="imgsu">
+            <a href="index.html">
+              <img src="Images/logo.jpg" alt="Teqtronics Logo">
+            </a>
+          </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="navbr.js"></script>
+  </body>
+</html>

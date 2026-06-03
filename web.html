@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Stack Development Bootcamp</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+
+    <style>
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color:#d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+      </div>
+      <div class="mobileMenuDiv">
+        <button class="button" style="margin-bottom: 30px">
+          <a href="Campuses.html">Our Campuses</a>
+        </button>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="bootcamp-section">
+      <h1>Full-Stack Development with MERN & MEAN</h1>
+      <!-- <div class="starting-from">
+      Starting From <span>Sep 10, 2025</span>
+    </div> -->
+
+      <div class="details">
+        <div class="detail-box">
+          <span class="icon-ring"
+            ><i class="fa-regular fa-calendar-days"></i
+          ></span>
+          <span>Duration: <strong>3 Months with 6 Months Support</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-clock"></i></span>
+          <span>Class Timing: <strong>To be mutually decided</strong></span>
+        </div>
+        <div class="detail-box">
+          <span class="icon-ring"><i class="fa-regular fa-user"></i></span>
+          <span>Mode Of Training: <strong>Online & On Campus</strong></span>
+        </div>
+      </div>
+
+      <button class="apply-btn"><a href="Enroll.html">— APPLY NOW</a></button>
+
+      <!-- Features Section -->
+      <div class="features container">
+        <div class="feature-col">
+          <div class="feature-item">
+            Learn Frontend Development with HTML, CSS & JavaScript
+          </div>
+          <div class="feature-item">
+            Master React.js and Angular for dynamic UIs
+          </div>
+          <div class="feature-item">
+            Backend Development using Node.js & Express
+          </div>
+          <div class="feature-item">Work with REST APIs and Authentication</div>
+        </div>
+        <div class="feature-col">
+          <div class="feature-item">Database Management with MongoDB & SQL</div>
+          <div class="feature-item">
+            Deploy Projects on Vercel, Netlify & Cloud
+          </div>
+          <div class="feature-item">
+            Get Professional Certificates on Completion
+          </div>
+          <div class="feature-item">Trainer & Community Support (Online)</div>
+        </div>
+      </div>
+    </section>
+
+    <section></section>
+
+    <h2 class="heading">
+      Want to Become an Expert in Web Development Bootcamp
+    </h2>
+
+    <section class="modules">
+      <h3>Module Breakdown</h3>
+      <p>
+        Here’s something <strong>super exciting</strong> — A complete overview
+        of the modules you’ll cover while building your Web Development skills.
+      </p>
+
+      <div class="module-box">
+        <div class="module-number">1</div>
+        <div class="module-content">
+          <h4>Introduction to Web Development</h4>
+          <ul>
+            <li>Understanding Web Basics (HTML, CSS, JS)</li>
+            <li>Setting up Development Environment</li>
+            <li>Version Control with Git & GitHub</li>
+            <li>How the Web Works (Client-Server Model)</li>
+            <li>Project Setup & Folder Structure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">2</div>
+        <div class="module-content">
+          <h4>Frontend Development</h4>
+          <ul>
+            <li>Advanced HTML5 & CSS3</li>
+            <li>JavaScript Fundamentals & ES6+</li>
+            <li>Responsive Design with Flexbox & Grid</li>
+            <li>Introduction to React.js</li>
+            <li>Component-Based Architecture</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">3</div>
+        <div class="module-content">
+          <h4>Backend Development</h4>
+          <ul>
+            <li>Node.js & Express.js</li>
+            <li>Building REST APIs</li>
+            <li>Database Integration with MongoDB</li>
+            <li>Authentication & Authorization</li>
+            <li>Error Handling & Security Basics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-box">
+        <div class="module-number">4</div>
+        <div class="module-content">
+          <h4>Full-Stack Project & Deployment</h4>
+          <ul>
+            <li>Integrating Frontend & Backend</li>
+            <li>State Management (Redux / Context API)</li>
+            <li>Testing & Debugging</li>
+            <li>Deployment on Vercel & Render</li>
+            <li>Final Capstone Project</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="heading">Why Join This Full Stack Web Development Course?</h2>
+    <section class="benefits">
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <i class="fas fa-code"></i>
+          <h4>Frontend Development</h4>
+          <p>
+            Learn React (MERN) and Angular (MEAN) with modern UI design
+            principles.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-server"></i>
+          <h4>Backend Development</h4>
+          <p>
+            Master Node.js & Express.js to build scalable server-side
+            applications.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-database"></i>
+          <h4>NoSQL & SQL Databases</h4>
+          <p>
+            Work with MongoDB (MERN/MEAN) and relational databases for real
+            projects.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <i class="fab fa-react"></i>
+          <h4>Full-Stack Projects</h4>
+          <p>
+            Combine React/Angular with Node.js and MongoDB to deliver production
+            apps.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-project-diagram"></i>
+          <h4>Capstone Projects</h4>
+          <p>
+            Build complete end-to-end applications and deploy them to the cloud.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-briefcase"></i>
+          <h4>Career Support</h4>
+          <p>Freelancing roadmap, interview prep & job placement guidance.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+      href="https://wa.me/+92345-8322915"
+      target="_blank"
+      class="whatsapp-float"
+    >
+      <span>
+        <svg
+          version="1.1"
+          id="Icons"
+          viewBox="0 0 32 32"
+          xml:space="preserve"
+          width="42px"
+          height="42px"
+          fill="#000000"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <style type="text/css">
+              .st0 {
+                fill: #ffffff;
+              }
+              .st1 {
+                fill: #3a559f;
+              }
+              .st2 {
+                fill: #f4f4f4;
+              }
+              .st3 {
+                fill: #ff0084;
+              }
+              .st4 {
+                fill: #0063db;
+              }
+              .st5 {
+                fill: #00aced;
+              }
+              .st6 {
+                fill: #ffec06;
+              }
+              .st7 {
+                fill: #ff0000;
+              }
+              .st8 {
+                fill: #25d366;
+              }
+              .st9 {
+                fill: #0088ff;
+              }
+              .st10 {
+                fill: #314358;
+              }
+              .st11 {
+                fill: #ee6996;
+              }
+              .st12 {
+                fill: #01aef3;
+              }
+              .st13 {
+                fill: #fffeff;
+              }
+              .st14 {
+                fill: #f06a35;
+              }
+              .st15 {
+                fill: #00adef;
+              }
+              .st16 {
+                fill: #1769ff;
+              }
+              .st17 {
+                fill: #1ab7ea;
+              }
+              .st18 {
+                fill: #6001d1;
+              }
+              .st19 {
+                fill: #e41214;
+              }
+              .st20 {
+                fill: #05ce78;
+              }
+              .st21 {
+                fill: #7b519c;
+              }
+              .st22 {
+                fill: #ff4500;
+              }
+              .st23 {
+                fill: #00f076;
+              }
+              .st24 {
+                fill: #ffc900;
+              }
+              .st25 {
+                fill: #00d6ff;
+              }
+              .st26 {
+                fill: #ff3a44;
+              }
+              .st27 {
+                fill: #ff6a36;
+              }
+              .st28 {
+                fill: #0061fe;
+              }
+              .st29 {
+                fill: #f7981c;
+              }
+              .st30 {
+                fill: #ee1b22;
+              }
+              .st31 {
+                fill: #ef3561;
+              }
+              .st32 {
+                fill: none;
+                stroke: #ffffff;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+              }
+              .st33 {
+                fill: #0097d3;
+              }
+              .st34 {
+                fill: #01308a;
+              }
+              .st35 {
+                fill: #019cde;
+              }
+              .st36 {
+                fill: #ffd049;
+              }
+              .st37 {
+                fill: #16a05d;
+              }
+              .st38 {
+                fill: #4486f4;
+              }
+              .st39 {
+                fill: none;
+              }
+              .st40 {
+                fill: #34a853;
+              }
+              .st41 {
+                fill: #4285f4;
+              }
+              .st42 {
+                fill: #fbbc05;
+              }
+              .st43 {
+                fill: #ea4335;
+              }
+            </style>
+            <path
+              class="st8"
+              d="M17,0C8.7,0,2,6.7,2,15c0,3.4,1.1,6.6,3.2,9.2l-2.1,6.4c-0.1,0.4,0,0.8,0.3,1.1C3.5,31.9,3.8,32,4,32 c0.1,0,0.3,0,0.4-0.1l6.9-3.1C13.1,29.6,15,30,17,30c8.3,0,15-6.7,15-15S25.3,0,17,0z"
+            ></path>
+            <path
+              class="st0"
+              d="M25.7,20.5c-0.4,1.2-1.9,2.2-3.2,2.4C22.2,23,21.9,23,21.5,23c-0.8,0-2-0.2-4.1-1.1c-2.4-1-4.8-3.1-6.7-5.8 L10.7,16C10.1,15.1,9,13.4,9,11.6c0-2.2,1.1-3.3,1.5-3.8c0.5-0.5,1.2-0.8,2-0.8c0.2,0,0.3,0,0.5,0c0.7,0,1.2,0.2,1.7,1.2l0.4,0.8 c0.3,0.8,0.7,1.7,0.8,1.8c0.3,0.6,0.3,1.1,0,1.6c-0.1,0.3-0.3,0.5-0.5,0.7c-0.1,0.2-0.2,0.3-0.3,0.3c-0.1,0.1-0.1,0.1-0.2,0.2 c0.3,0.5,0.9,1.4,1.7,2.1c1.2,1.1,2.1,1.4,2.6,1.6l0,0c0.2-0.2,0.4-0.6,0.7-0.9l0.1-0.2c0.5-0.7,1.3-0.9,2.1-0.6 c0.4,0.2,2.6,1.2,2.6,1.2l0.2,0.1c0.3,0.2,0.7,0.3,0.9,0.7C26.2,18.5,25.9,19.8,25.7,20.5z"
+            ></path>
+          </g>
+        </svg>
+      </span>
+      <span class="wa-text">Connect with us</span>
+    </a> -->
+    <!-- WHATS APP ADDED ENDS HERE-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="script/navbr.js"></script>
+    <!-- Your script -->
+    <!-- Google Translate script (calls the function in translate.js) -->
+    <script src="script/googleTranslator.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  </body>
+</html>

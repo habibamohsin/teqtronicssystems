@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campuses</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="campusbtn.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* Particles canvas only inside header */
+      #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      /* Main section */
+      .campuses-section {
+        /* padding: 60px 20px; */
+        background: #f9fafb;
+      }
+
+      /* Header section */
+      .campuses-header {
+        position: relative; /* important */
+        text-align: center;
+        margin-bottom: 50px;
+        height: 250px;
+        overflow: hidden;
+        /* border-radius: 18px; */
+        background: linear-gradient(135deg, #8a1e22, #271111);
+      }
+
+      .campuses-header .title,
+      .campuses-header .subtitle {
+        position: relative;
+        z-index: 2; /* above particles */
+        color: #fff;
+      }
+
+      .campuses-header .title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-top: 70px;
+      }
+
+      .campuses-header .subtitle {
+        font-size: 1rem;
+        margin-top: 10px;
+        color: #d1d5db;
+      }
+
+      /* Grid */
+      .campus-grid {
+        padding: 0px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+      }
+/* button */
+.btn.primary i {
+  color: #d63232; 
+  margin-right: 6px;
+}
+      /* Card */
+      .campus-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transition: all 0.35s ease;
+        display: flex;
+        flex-direction: column;
+      }
+.card-media::after {
+  content: "4th Floor, 69 CCA, Sector C, DHA Phase 6, Lahore";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #d63232;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+}
+.card-media {
+  position: relative;
+}
+      .campus-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 32px rgba(30, 58, 138, 0.2);
+      }
+
+      /* Media */
+      .card-media {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Body */
+      .card-body {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .card-top .name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #111827;
+      }
+
+      .card-top .tag {
+        background: #0d0d0e;
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        border-radius: 12px;
+      }
+
+      /* Details */
+      .details {
+        margin: 12px 0 20px;
+      }
+
+      .detail-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: #4b5563;
+        margin-bottom: 6px;
+      }
+
+      .detail-row i {
+        color: #d63232;
+      }
+
+      /* Actions */
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: auto;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 8px 14px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn.primary {
+        background: #0d0d0e;
+        color: #fff;
+      }
+
+      .btn.primary:hover {
+        background: #f59e0b;
+        color: #d63232;
+      }
+
+      .btn.ghost {
+        background: transparent;
+        border: 1px solid #d1d5db;
+        color: #374151;
+      }
+
+      .btn.ghost:hover {
+        border-color: #d63232;
+        color: #d63232;
+      }
+
+      .footer {
+        background: #0d1117;
+        color: #ccc;
+
+        padding: 60px 20px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 40px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .footer-left h2 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .footer-left p {
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        margin-right: 15px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: #d63232;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin: 10px 0;
+      }
+
+      .footer-links ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-links ul li a:hover {
+        color: #d63232;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #d63232;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      .footer-bottom-links a {
+        margin-left: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d63232;
+      }
+
+      @media (max-width: 992px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .footer-social a {
+          margin: 0 10px;
+        }
+      }
+
+      .footer-contact li a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer-contact li {
+        list-style-type: none;
+        font-size: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+      <div><i class="fas fa-phone"></i>Call: 0345-8322915</div>
+      <div><i class="fas fa-envelope"></i> Email: info@teqtronics.com</div>
+    </div>
+
+    <!-- Middle Navbar -->
+    <div class="navbar-middle">
+      <div class="newsu">
+        <div class="imgsu">
+          <a href="index.html"
+            ><img src="/Images/teqtronics logo.png" alt="Teqtronics Logo"
+          /></a>
+        </div>
+        
+      </div>
+      <div class="mobileMenuDiv">
+        <div>
+          <button class="button">
+            <a href="Campuses.html">Our Campuses</a>
+          </button>
+          <!-- <button class="btnsu">
+            <a href="Campuses.html">Our Campuses</a>
+          </button> -->
+        </div>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Bottom Navbar -->
+    <div class="navbar-bottom">
+      <div class="nav-container">
+        <ul id="menu">
+          <li><a id="me" href="index.html"> Home</a></li>
+          <li><a id="me" href="About.html">About Us</a></li>
+          <li><a id="mean" href="ourcourses.html">Trainings </a></li>
+          <li><a id="mean" href="Campuses.html">Campuses</a></li>
+          <li><a id="mean" href="Contact.html">Contact</a></li>
+
+          <li>
+            <a href="Contact.html" class="support-btn"
+              ><i class="fas fa-headset"></i> Support</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="campuses-section" id="main">
+      <div class="containers">
+        <!-- Header with particles -->
+        <section id="campuses1">
+          <header class="campuses-header">
+            <div id="particles-js"></div>
+            <div>
+              <h1 class="title">Our Campuses</h1>
+              <p class="subtitle">
+                Premium facilities across the country — find the campus nearest
+                to you.
+              </p>
+            </div>
+          </header>
+        </section>
+
+        <!-- Campus cards -->
+        <section class="campus-grid" id="campusContainer">
+
+  <!-- LAHORE CAMPUS ONLY -->
+  <article class="campus-card">
+  <div
+    class="card-media"
+    style="background-image: url('Lahore.jpeg')"
+  ></div>
+
+  <div class="card-body">
+    <div class="card-top">
+      <h3 class="name">Lahore Campus</h3>
+      <span class="tag">DHA Phase 6</span>
+    </div>
+
+    <div class="details">
+      <div class="detail-row">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>4th Floor, 69 CCA, Sector C, DHA Phase 6, Lahore</span>
+      </div>
+
+      <div class="detail-row">
+        <i class="fas fa-phone"></i>
+        <span>+92 301 7654321</span>
+      </div>
+
+      <div class="detail-row">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Mon – Fri</span>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <p style="font-size:14px; color:#4b5563; margin-bottom:15px;">
+      Our Lahore branch is designed to deliver a modern and productive learning 
+      environment. Equipped with advanced computer labs, high-speed internet, 
+      and industry-standard tools, it supports both technical sessions and 
+      interactive workshops for students.
+    </p>
+
+    <div class="card-actions">
+      <a class="btn primary" href="https://www.teqtronics.com/">
+        <i class="fas fa-globe"></i> Visit
+      </a>
+
+      <a
+        class="btn primary"
+        href="https://maps.app.goo.gl/Fo8CsYmF99p6rSJVA"
+      >
+        <i class="fas fa-map"></i> Location
+      </a>
+    </div>
+  </div>
+</article>
+
+</section>
+      </div>
+    </main>
+
+   <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+           <div class="imgsu">
+          <a href="index.html"
+            ><img src="Images/logo.jpg" alt="Teqtronics Logo"
+          /></a>
+        </div>
+          <p>
+            We build innovative software solutions that empower businesses to
+            scale and thrive in the digital world. Let's create the future
+            together.
+          </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="Campuses.html">Campuses</a></li>
+            <li><a href="ourcourses.html">Courses</a></li>
+            <!-- <li><a href="../servicesPage/Services.html">Services</a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="advanced.html">Advanced Web Development</a></li>
+            <li><a href="cyber.html">Cyber Security</a></li>
+            <li><a href="google.html">Google UI/UX Design</a></li>
+            <li><a href="data.html">Data Forensic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html#FAQ">FAQs</a></li>
+            <li><a href="index.html#SR">Students Reviews</a></li>
+            <!-- <li><a href="../servicesPage/Services.html#CR">Client Reviews</a></li> -->
+            <li><a href="Enroll.html">Enroll Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Punjab, Pakistan</p>
+          <p><i class="fas fa-phone-alt"></i> +92 345-8322915</p>
+          <p><i class="fas fa-envelope"></i> info@teqtronics.com</p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Teqtronics. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 70, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.6 },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: { enable: true, speed: 2, out_mode: "out" },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="navbr.js"></script>
+  </body>
+</html>
